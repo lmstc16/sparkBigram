@@ -25,9 +25,15 @@ agg = bigrams.map(lambda a: (0, a[1]))
 top = agg.reduce(lambda a, b: (a[0] + 1, a[1] + b[1]) if a[1] + b[1] < mylen / 10 else a)
 
 file = open("/usr/local/spark/result.txt", "w")
+<<<<<<< HEAD
 file.write("the total number of bigrams: %d \n" %(mylen))
 file.write("the most common bigram: %s \n" %(most_common))
 file.write("the number of bigrams required to add up to 10 percent of all bigrams: %d" %(top[0]))
+=======
+file.write("the total number of bigrams: %d \n" (mylen))
+file.write("the most common bigram: %s \n" (most_common))
+file.write("the number of bigrams required to add up to 10 percent of all bigrams: %d" top[0])
+>>>>>>> fc6b7614ac7ad648b89ef2eba32491148fc4cd33
 file.close()
 
 bigrams.saveAsTextFile(output_file)

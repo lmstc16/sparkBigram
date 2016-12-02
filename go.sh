@@ -10,11 +10,7 @@ sleep 10
 # run the code inside the container
 #cd /usr/local/spark/
 echo "start run python doc"
-<<<<<<< HEAD
-docker exec myspark /bin/spark-submit /usr/local/spark/bigram.py
-=======
-docker exec myspark ./bin/spark-submit /usr/local/spark/bigram.py
->>>>>>> fc6b7614ac7ad648b89ef2eba32491148fc4cd33
+docker exec myspark spark-submit /usr/local/spark/bigram.py
 
 #echo the result
 docker exec myspark cat /usr/local/spark/output/part-00000

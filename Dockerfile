@@ -20,6 +20,7 @@ RUN chmod 700 /etc/bootstrap.sh
 # add input file to container
 ADD input.txt $SPARK_HOME/input.txt
 ADD bigram.py $SPARK_HOME/bigram.py
+ADD startBigram.sh $SPARK_HOME/startBigram.sh
 
 #install R
 #RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm

@@ -1,3 +1,9 @@
+'/bin/bash go.sh' to start the docker container
+startBigram.sh is the script to run the spark and output the result
+input.txt is our lexicon
+
+docker image based on https://github.com/sequenceiq/docker-spark
+
 Apache Spark on Docker
 ==========
 
